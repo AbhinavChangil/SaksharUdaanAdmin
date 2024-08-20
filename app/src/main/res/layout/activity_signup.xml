@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#CEE3D3">
+
+    <ImageView
+        android:id="@+id/logo_signup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+        android:src="@drawable/logo_edu"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/logo_signup"
+        app:layout_constraintStart_toStartOf="@+id/logo_signup"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.05"
+        android:text="Create Account"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/tv_note_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        android:layout_marginTop="5dp"
+        android:text="Please Sign up to continue and get the \nbest from our app"
+        android:textSize="18sp"
+        android:textColor="#5C5B5B"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        tools:ignore="MissingConstraints"
+        style="@style/CustomConstraintLayoutStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_note_login"
+        android:background="@drawable/constraint_layout_main">
+
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/acme"
+            android:text="Sign up"
+            android:letterSpacing="0.03"
+            android:textAlignment="center"
+            android:textAppearance="@id/tv_welcome"
+            style="@style/tv_color_main"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_name1"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Name"
+            android:shadowColor="#6E6C6C"
+            android:textColorHint="#888A89"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_email1"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Email"
+            android:shadowColor="#6E6C6C"
+            android:textColorHint="#888A89"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_name1"  >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_password1"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            android:outlineAmbientShadowColor="@color/black"
+            android:textColorHint="#888A89"
+            android:shadowColor="#6E6C6C"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/edt_email1"
+            app:layout_constraintRight_toRightOf="@+id/edt_email1"
+            app:layout_constraintTop_toBottomOf="@+id/edt_email1">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_password21"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Confirm Password"
+            android:outlineAmbientShadowColor="@color/black"
+            android:textColorHint="#888A89"
+            android:shadowColor="#6E6C6C"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@+id/edt_password1"
+            app:layout_constraintRight_toRightOf="@+id/edt_password1"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password1">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password2"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/policy_checkbox"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:layout_constraintTop_toTopOf="@id/tv_policy"
+            app:layout_constraintBottom_toBottomOf="@id/tv_policy"
+            app:layout_constraintStart_toStartOf="@id/edt_password21"/>
+
+        <TextView
+            android:id="@+id/tv_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/amethysta"
+            android:text=" I have read and accept the "
+            android:textAlignment="center"
+            style="@style/tv_color_main"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/policy_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password21" />
+
+        <TextView
+            android:id="@+id/link_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/amethysta"
+            android:text="Privacy Policy"
+            android:textAlignment="center"
+            android:textColor="#079715"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_policy"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password21" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/whitebutton"
+            android:backgroundTint="#308d46"
+            android:elevation="30dp"
+            android:fontFamily="@font/arima_semibold"
+            android:shadowColor="#F0F6F0"
+            android:text="Sign up"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@id/edt_password21"
+            app:layout_constraintStart_toStartOf="@+id/edt_password21"
+            app:layout_constraintTop_toBottomOf="@+id/tv_policy" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_signup4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/amethysta"
+            android:text="Already have an account?  "
+            android:textAlignment="center"
+            style="@style/tv_color_main"
+            android:textSize="17dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_signup"
+            app:layout_constraintEnd_toStartOf="@+id/tv_login_link" />
+        <TextView
+            android:id="@+id/tv_login_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amethysta"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="#079715"
+            android:textSize="17dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintTop_toTopOf="@id/tv_signup4"
+            app:layout_constraintBottom_toBottomOf="@id/tv_signup4"
+            app:layout_constraintEnd_toEndOf="@+id/btn_signup"/>
+
+        <TextView
+            android:id="@+id/tv_signup5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup4"
+            app:layout_constraintStart_toStartOf="@id/edt_password1"
+            app:layout_constraintEnd_toEndOf="@id/edt_password1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="By creating this account, you agree to our "
+            style="@style/tv_color_main"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_signup6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup5"
+            app:layout_constraintStart_toStartOf="@+id/tv_signup5"
+            app:layout_constraintEnd_toEndOf="@+id/tv_signup5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            android:text="Privacy Policy and Cookie Policy"
+            android:textColor="#079715"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

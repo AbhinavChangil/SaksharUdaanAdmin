@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SaksharUdaanAdmin" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">#308d46</item>
+        <item name="android:statusBarColor">#CEE3D3</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#308d46</item>
+        <item name="android:statusBarColor">#1f1f1f</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="CustomConstraintLayoutStyle">
+        <item name="android:backgroundTint">#252525</item> <!-- Replace with desired color -->
+    </style>
+
+    <style name="main_contraint_in">
+        <item name="android:background">#1f1f1f</item>
+        <item name="android:backgroundTint">#1f1f1f</item>
+    </style>
+
+    <style name="tv_color_main">
+        <item name="color">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="google_background">
+        <item name="android:background">@drawable/googlebutton_background</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bottom_navigation_bar">
+<!--        <item name="cnb_menuResource">@menu/bottom_menu</item>-->
+        <item name="android:backgroundTint">#152529</item>
+        <item name="android:iconTint" tools:targetApi="o">#ffffff</item>
+    </style>
+
+    <style name="toolbar_main">
+        <item name="android:backgroundTint">#152529</item>
+        <item name="android:background">#152529</item>
+    </style>
+
+    <style name="icons_profile_fragment">
+        <item name="android:background">#152529</item>
+    </style>
+
+    <style name="EditProfileTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#308d46</item>
+        <item name="android:statusBarColor">#152529</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>
