@@ -26,9 +26,9 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:padding="10dp"
-        app:layout_constraintStart_toStartOf="@+id/toolbar_main"
-        app:layout_constraintTop_toTopOf="@+id/toolbar_main"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar_main"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_upload_course"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_upload_course"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_upload_course"
         android:src="@drawable/arrow_left"/>
 
 
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_video_foreground"/>
+                android:src="@drawable/video"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -124,7 +124,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:visibility="visible"
-                android:src="@drawable/ic_video_foreground"/>
+                android:src="@drawable/thumbnail"/>
 
 
         </androidx.cardview.widget.CardView>

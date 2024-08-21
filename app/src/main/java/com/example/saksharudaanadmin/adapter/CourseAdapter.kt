@@ -38,9 +38,10 @@ class CourseAdapter(
     override fun onBindViewHolder(holder: CourseViewHolder, position: Int) {
         holder.bind(position)
         holder.itemView.setOnClickListener{
-            val courseD = courseList[position]
+            val courseItem = courseList[position]
             val intent = Intent(context, UploadPlaylistActivity::class.java)
-            intent.putExtra("postId",courseD.postId)
+            intent.putExtra("postId",courseItem.postId)
+            intent.putExtra("courseTitle",courseItem.courseTitle)
             context.startActivity(intent)
         }
     }
