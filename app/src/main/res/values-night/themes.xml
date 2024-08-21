@@ -35,7 +35,7 @@
     </style>
 
     <style name="bottom_navigation_bar">
-<!--        <item name="cnb_menuResource">@menu/bottom_menu</item>-->
+        <item name="cnb_menuResource">@menu/bottom_menu</item>
         <item name="android:backgroundTint">#152529</item>
         <item name="android:iconTint" tools:targetApi="o">#ffffff</item>
     </style>
@@ -50,6 +50,13 @@
     </style>
 
     <style name="EditProfileTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#308d46</item>
+        <item name="android:statusBarColor">#152529</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="UploadCourseTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">#308d46</item>
         <item name="android:statusBarColor">#152529</item>

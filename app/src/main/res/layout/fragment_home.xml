@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment"
+    style="@style/main_contraint_in">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:backgroundTint="#308d46"
+        android:src="@drawable/ic_plus"
+        app:rippleColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        style="@style/toolbar_main"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_yourCourses"
+        android:paddingBottom="15dp"
+        android:background="@drawable/frame_layout_shape">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey!"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/arima_semibold"
+            style="@style/tv_color_main"/>
+
+        <TextView
+            android:id="@+id/tv_home2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to your admin dashboard!"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/arima"
+            style="@style/tv_color_main"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_yourCourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your  Courses"
+        android:textSize="20sp"
+        android:fontFamily="@font/acme"
+        app:layout_constraintTop_toBottomOf="@+id/ll1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        style="@style/tv_color_main"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        tools:listitem="@layout/home_gv_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_yourCourses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:verticalSpacing="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,17 +50,22 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.storage)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation("com.google.android.gms:play-services-auth:20.5.0")
-    implementation("com.github.ismaeldivita:chip-navigation-bar:1.4.0")
 
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
 
     //glide dependency for loading image
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //bottom chip navigation
+    implementation("com.github.ismaeldivita:chip-navigation-bar:1.4.0")
+
 }

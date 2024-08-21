@@ -37,7 +37,7 @@
     </style>
 
     <style name="bottom_navigation_bar">
-<!--        <item name="cnb_menuResource">@menu/bottom_menu</item>-->
+        <item name="cnb_menuResource">@menu/bottom_menu</item>
         <item name="android:backgroundTint">#CEE3D3</item>
         <item name="android:iconTint" tools:targetApi="o">#000000</item>
     </style>
@@ -53,6 +53,13 @@
 
 
     <style name="EditProfileTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#308d46</item>
+        <item name="android:statusBarColor">#CEE3D3</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="UploadCourseTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">#308d46</item>
         <item name="android:statusBarColor">#CEE3D3</item>
