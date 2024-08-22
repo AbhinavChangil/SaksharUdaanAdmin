@@ -94,7 +94,7 @@ class HomeFragment : Fragment() {
         courseList = arrayListOf()
         courseRef.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                courseList.clear()
+//                courseList.clear()
                 for(courseSnapshot in snapshot.children){
                     val courseItem = courseSnapshot.getValue(CourseModel::class.java)
                     courseItem?.let {

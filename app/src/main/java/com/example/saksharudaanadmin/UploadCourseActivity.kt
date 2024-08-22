@@ -82,9 +82,11 @@ class UploadCourseActivity : AppCompatActivity() {
     private fun uploadCourse(courseThumbnailUri: Uri, courseVideoUri: Uri, courseTitle: String, courseDescription: String, courseDuration: String, coursePrice: String) {
         val userId = auth.currentUser?.uid?:""
         val courseReference = database.reference.child("course")
-        val thumbnailReference = storage.reference.child("course").child("thumbnails")
-        val videoReference = storage.reference.child("course").child("videos")
         val postId = courseReference.push().key
+//        val childKey = System.currentTimeMillis().toString()
+        val thumbnailReference = storage.reference.child("course").child("thumbnails").child("$postId-thumbnail")
+        val videoReference = storage.reference.child("course").child("videos").child("$postId-video")
+
 
 
         thumbnailReference.putFile(courseThumbnailUri).addOnSuccessListener {
