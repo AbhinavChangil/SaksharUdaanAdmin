@@ -107,6 +107,7 @@ class ProfileFragment : Fragment() {
             // Set all values
             userReference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
+                    if (!isAdded) return // Check if Fragment is still added
                     if (snapshot.exists()) {
                         val userProfile = snapshot.getValue(UserModel::class.java)
                         if (userProfile != null) {
@@ -129,6 +130,7 @@ class ProfileFragment : Fragment() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
+                    if (!isAdded) return // Check if Fragment is still added
                     showToast("Failed to load user data")
                 }
             })

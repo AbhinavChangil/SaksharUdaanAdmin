@@ -94,7 +94,8 @@ class HomeFragment : Fragment() {
         courseList = arrayListOf()
         courseRef.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-//                courseList.clear()
+                if (!isAdded) return // Check if Fragment is still added
+                courseList.clear()
                 for(courseSnapshot in snapshot.children){
                     val courseItem = courseSnapshot.getValue(CourseModel::class.java)
                     courseItem?.let {
@@ -107,6 +108,7 @@ class HomeFragment : Fragment() {
 
 
             override fun onCancelled(error: DatabaseError) {
+                if (!isAdded) return // Check if Fragment is still added
                 Toast.makeText(requireContext(),error.message, Toast.LENGTH_SHORT).show()
                 loadingDialog.dismiss()
             }
